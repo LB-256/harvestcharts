@@ -4,7 +4,6 @@ import { formatUnits } from "@ethersproject/units";
 import { obj, ethblocksperday, ethblocksperhour, times, web3 } from './Abi';
 import Chart from './chart';
 import { Dropdown } from 'semantic-ui-react'
-import 'semantic-ui-css/semantic.min.css';
 
 class App extends Component {
 
