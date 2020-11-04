@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
+import github from './github.png';
 import { formatUnits } from "@ethersproject/units";
 import { obj, ethblocksperday, ethblocksperhour, times, web3 } from './Abi';
 import Chart from './chart';
-import { Dropdown } from 'semantic-ui-react'
+import { Dropdown } from 'semantic-ui-react';
 
 class App extends Component {
 
@@ -11,7 +12,6 @@ class App extends Component {
     super(props)
     this.state = { 
       loading: true, 
-      blocknumbers: null, 
       charts: null,
       n: 3,
       a: ethblocksperday
@@ -19,15 +19,12 @@ class App extends Component {
   }
 
 async componentDidMount(){ 
-    console.time('a')
     this.contractsInitiate()
     await this.sharePromises(obj)
     this.setState({loading: false})
-    console.timeEnd('a')
   }
 
   onChangeDropDown = async (event, data) => {
-    console.time('b')
     if(data.value !== this.state.n){
       this.setState({loading: true})
       if(data.value === 24){
@@ -38,11 +35,9 @@ async componentDidMount(){
         this.setState({ n: data.value })  
         await this.sharePromises(obj)
     }
-    console.timeEnd('b')
   }
 
   async sharePromises(o){
-    
     const curBlock = await web3.eth.getBlockNumber()
     let n = this.state.n
     let promises = o.map(contract => {
@@ -111,9 +106,10 @@ render(){
       <h1><a href="https://harvest.finance/" target="_blank" rel="noopener noreferrer">Harvest Finance</a> fAsset share price charts</h1>
       {this.state.loading === false ? 
         <Fragment> 
-          <p>Each data point represents 1 hour for the 24h period & 1d for all other periods, each contract was initiated at a different time & as such have different max values available. Each time period is calculated using estimated average blocks per day ~6500, this is why the x axis is represented in block numbers. Setting the period on max will take some time to load values from all assets.</p>
+          <p>Each data point represents 1h for the 24h period & 1d for all other periods. Each contract was initiated at a different time & as such has different max values available. Time periods are calculated using estimated average blocks per day ~6500, this is why the x axis is represented in block numbers. Setting the period to max will take some time to load.</p>
           <Dropdown placeholder="Select time period" selection onChange={this.onChangeDropDown} options={times} selectOnBlur={false} />
-          <Chart charts={this.state.charts} blocknumbers={this.state.blocknumbers} n={this.state.n}></Chart>
+          <Chart charts={this.state.charts}></Chart>
+          <a href="https://github.com/LB-256/harvestcharts" target="_blank" rel="noopener noreferrer"><img id="githublink" alt="github link" src={github} /></a>
         </Fragment>
         : <h3>Loading...</h3> }
       </header>          

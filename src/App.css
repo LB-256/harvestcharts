@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+h1{
+  font-size:3rem;
+}
+p, h3{
+  font-family: monospace;
+  width:80%;
+}
 
 .App-header {
   background-color: #DEF1E7;
@@ -17,9 +24,6 @@
     font-family: monospace;
     margin-top:50px !important;
 }
-.App-link {
-  color: #61dafb;
-}
 
 .js-plotly-plot{
   margin-bottom:55px;
@@ -30,10 +34,6 @@
   margin-bottom:55px;
 }
 
-h1{
-  font-size:3rem;
-}
-p, h3{
-  font-family: monospace;
-  width:80%;
+#githublink{
+  margin-bottom: 15px;;
 }
