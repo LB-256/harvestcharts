@@ -5,35 +5,105 @@ h1{
   font-size:3rem;
 }
 p, h3{
-  font-family: monospace;
+  font-family: Helvetica, sans-serif;
   width:80%;
 }
 
 .App-header {
-  background-color: #DEF1E7;
+  background-color: #BCE3E2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #333333;
+  color: #000;
 }
 .App-header h1{
     font-size:40px;
-    font-family: monospace;
+    font-family: Helvetica, sans-serif;
     margin-top:50px !important;
 }
 
 .js-plotly-plot{
-  margin-bottom:55px;
+  margin-bottom:30px;
+  border:2px solid rgb(53, 52, 47);
+  margin-left:15px;
+  margin-right:15px;
+  box-shadow:black 3px 3px;
 }
 
-.ui.selection.dropdown{
-  font-size:small;
-  margin-bottom:55px;
+.ui.button{
+  color:#000;
+  padding:20px;
 }
 
 #githublink{
   margin-bottom: 15px;;
+}
+#addbtn{
+  background: none;
+  font-size:15px;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 25px;;
+}
+
+#times{
+  background-color:#FFFCE6;
+  color:#000;
+  margin-top:60px;
+  margin-bottom:15px;
+  border-radius:3px;
+  border:2px solid rgb(53, 52, 47);
+}
+
+#times .button{
+  background-color:#FFFCE6;
+}
+
+#times .ui.active.button{
+  background-color:#f1ecc6;
+}
+
+#times .button:hover{
+  font-weight:bold;
+}
+
+#currency{
+  position: absolute;
+  left:136px;
+  border-radius:3px;
+  border:2px solid rgb(53, 52, 47);
+}
+
+#currency .button{
+  background-color:#FFFCE6;
+}
+#currency .ui.active.button{
+  background-color:#f1ecc6;
+}
+
+#main-switch .button{
+  font-size: 16px;
+  background-color:#FFFCE6;
+  color:#000;
+  border:2px solid rgb(53, 52, 47);
+  margin:0 10px 10px 0;
+  border-radius:3px;
+  transition: box-shadow 1s;
+}
+
+#main-switch .button:hover{
+  box-shadow:black 3px 3px;
+}
+
+#main-switch .ui.active.button{
+  background-color:#f1ecc6;
+  font-weight: bold;
+}
+
+#h1link{
+  color:#000;
 }

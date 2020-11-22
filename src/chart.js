@@ -7,6 +7,7 @@ class Chart extends Component {
     <div id="content">
     {this.props.charts.map((chart, key) => {
         return(    
+            
             <Plot
                 key={key}
                 data={[
@@ -23,8 +24,8 @@ class Chart extends Component {
                     {
                     width: 520, 
                     height: 420, 
-                    plot_bgcolor:"#DEF1E7",
-                    paper_bgcolor:"#DEF1E7",
+                    plot_bgcolor:"#FFFCE6",
+                    paper_bgcolor:"#FFFCE6",
                     title: "<b>" + chart.title + "</b>",
                     titlefont: {
                         family: 'Monospace',
@@ -32,7 +33,7 @@ class Chart extends Component {
                         color: '#333'
                     },
                     xaxis:{
-                        title: "<b>x: block number</b> <br> Change: " + chart.percent + "% <br> Annualized: " + chart.annual + "%",
+                        title: "<b>x: block number</b>" + chart.percent + chart.annual,
                         titlefont: {
                             family: 'Monospace',
                             size: 16,
@@ -40,7 +41,7 @@ class Chart extends Component {
                         }
                     }, 
                     yaxis:{
-                    title: '<b>y: share price</b>',
+                    title: chart.ytitle,
                     titlefont: {
                         family: 'Monospace',
                         size: 16,
@@ -49,7 +50,7 @@ class Chart extends Component {
                 }
                 }
                 }
-            />                   
+            />         
         )
     })} 
     </div>
