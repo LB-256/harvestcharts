@@ -46,8 +46,6 @@ p, h3{
 }
 
 #times{
-  background-color:#FFFCE6;
-  color:#000;
   margin-top:60px;
   margin-bottom:15px;
   border-radius:3px;
@@ -55,17 +53,20 @@ p, h3{
 }
 
 #times .button{
-  color:#000;
   background-color:#FFFCE6;
-}
-
-#times .ui.active.button{
-  background-color:#f1ecc6;
+  color:#000;
+  font-weight:normal;
 }
 
 #times .button:hover{
   font-weight:bold;
 }
+
+#times .ui.active.button{
+  background-color:#f1ecc6;
+  font-weight:bold;
+}
+
 
 #currency{
   position: absolute;
