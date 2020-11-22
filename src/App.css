@@ -33,11 +33,6 @@ p, h3{
   box-shadow:black 3px 3px;
 }
 
-.ui.button{
-  color:#000;
-  padding:20px;
-}
-
 #githublink{
   margin-bottom: 15px;;
 }
@@ -60,6 +55,7 @@ p, h3{
 }
 
 #times .button{
+  color:#000;
   background-color:#FFFCE6;
 }
 
@@ -79,6 +75,7 @@ p, h3{
 }
 
 #currency .button{
+  color:#000;
   background-color:#FFFCE6;
 }
 #currency .ui.active.button{
@@ -86,9 +83,9 @@ p, h3{
 }
 
 #main-switch .button{
+  color:#000;
   font-size: 16px;
   background-color:#FFFCE6;
-  color:#000;
   border:2px solid rgb(53, 52, 47);
   margin:0 10px 10px 0;
   border-radius:3px;
